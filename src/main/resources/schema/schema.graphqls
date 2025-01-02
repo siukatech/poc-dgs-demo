@@ -1,0 +1,20 @@
+type Query {
+    books(titleFilter: String): [Book]
+}
+
+type Book {
+    title: String
+    author: Author
+    releaseYear: Int
+    reviews: [Review]
+}
+
+type Author {
+    fullName: String
+    firstName: String
+    lastName: String
+}
+
+type Review {
+    starRating: Int
+}
